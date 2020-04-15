@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import ReactHtmlParser from "react-html-parser";
-
-// Mallzee Services
 import GhostAPI from 'api/GhostAPI';
-
-// Mallzee Components
 import Utils from "utils/Utils";
 import BusySignal from 'components/busysignal/BusySignal';
 
@@ -20,11 +16,7 @@ class CMS extends Component {
 
   fetchContent = () => {
     const api = GhostAPI();
-    const filterBySlug = this.state.config.slug;
-
-    // Lets see if we have a cached version of this page we can render
-    // immediately while waiting for this fetch...
-    this.cacheContentRestore();
+    const filterBySlug = this.state.slug;
 
     Utils.log(`Page: fetching content [${filterBySlug}]`);
 
@@ -45,11 +37,6 @@ class CMS extends Component {
               title: p.title,
               content: p
             });
-            // If we have a callback, call it
-            if (this.props.onContentLoaded) {
-              this.props.onContentLoaded(p);
-            }
-            this.cacheContent();
           } else {
             // Doesn't look like page was returned...
             this.setState({
@@ -57,10 +44,6 @@ class CMS extends Component {
               content: null,
               isLoading: false
             });
-            // If we have a callback, call it
-            if (this.props.onContentNotLoaded) {
-              this.props.onContentNotLoaded();
-            }
           }
         }
       })
@@ -77,34 +60,6 @@ class CMS extends Component {
   // ####################################################
   // MIDDLEWARE
   // ####################################################
-
-  cacheContent = () => {
-    const pageName = "pageCache__" + this.state.config.slug;
-    const pageCache = {
-      title: this.state.title,
-      content: this.state.content
-    };
-    Utils.cacheData(pageName, pageCache);
-    this.setState({
-      cmsCachRefreshed: true
-    });
-  };
-
-  cacheContentRestore = () => {
-    const pageName = "pageCache__" + this.state.config.slug;
-    const pageCache = Utils.cacheDataRestore(pageName);
-    if (pageCache) {
-      this.setState({
-        isLoading: false,
-        title: pageCache.title,
-        content: pageCache.content
-      });
-      // Provide data to upstream components if needed
-      if (this.props.onContentLoaded) {
-        this.props.onContentLoaded(pageCache);
-      }
-    }
-  };
 
   // ####################################################
   // RENDER
@@ -130,12 +85,12 @@ class CMS extends Component {
   // ####################################################
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.page && nextProps.page.slug) {
+    if (nextProps.slug) {
       // Only re-fetch if a new page (avoid excessive fetching)
-      if (nextProps.page.slug !== this.state.config.slug) {
+      if (nextProps.slug !== this.state.slug) {
         this.setState(
           {
-            config: nextProps.page
+            slug: nextProps.slug
           },
           () => {
             this.fetchContent();
@@ -145,7 +100,18 @@ class CMS extends Component {
     }
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    if (this.props.slug) {
+      this.setState(
+        {
+          slug: this.props.slug,
+        },
+        () => {
+          this.fetchContent();
+        }
+      );
+    }
+  }
 
   componentWillUnmount() {
     this.unmounted = true;
