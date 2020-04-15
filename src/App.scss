@@ -12,6 +12,7 @@ a {
   border-bottom: 1px solid $color-body;
   text-decoration: none;
   transition: $animation-speed;
+  background-color: rgba($color-body, 0.1);
 
   &:hover,
   &:focus {
@@ -21,6 +22,12 @@ a {
 }
 
 .shell {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__header {
     display: block;
@@ -37,6 +44,26 @@ a {
 
     &:hover {
       transform: translateX(10px) perspective(600px) rotateY(40deg);
+    }
+  }
+
+  &__content {
+    display: block;
+    position: absolute;
+    right: 4rem;
+    top: 6rem;
+    padding: 2rem;
+    width: 600px;
+    transform: perspective(600px) rotateY(-20deg);
+    transition: $animation-speed-slow;
+    transition-delay: 200ms;
+    background-color: rgba($color-black, 0.8);
+    color: $color-white;
+
+    a {
+      background-color: rgba($color-white, 0.1);
+      border-bottom: 1px solid $color-white;
+      color: $color-white;
     }
   }
 }

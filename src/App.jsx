@@ -13,8 +13,7 @@ class App extends Component {
             <h1>Shell Bryson</h1>
             <h2>Writer, web engineer</h2>
             <p>
-              Find me on twitter:
-               <a href="https://twitter.com/shellbryson">@shellbryson</a>
+              Find me on twitter: <a href="https://twitter.com/shellbryson">@shellbryson</a>
             </p>
             <NavigationTabs />
           </header>

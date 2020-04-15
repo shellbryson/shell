@@ -8,10 +8,14 @@ class NavigationTabs extends Component {
 
   render() {
     return (
-      <nav>
-        <div>
-          <NavLink to="/writer">Writer</NavLink>
-          <NavLink to="/engineer">Engineer</NavLink>
+      <nav className="shell-navigationtabs">
+        <div className="shell-navigationtabs__nav">
+          <NavLink to="/writer" className="shell-navigationtabs__link">
+            Writer
+          </NavLink>
+          <NavLink to="/engineer" className="shell-navigationtabs__link">
+            Engineer
+          </NavLink>
         </div>
       </nav>
     );

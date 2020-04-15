@@ -65,9 +65,17 @@ class CMS extends Component {
   // RENDER
   // ####################################################
 
+  renderTitle = () => {
+    if (this.state.content) {
+      return (
+        <h1>{this.state.content.title}</h1>
+      );
+    }
+  };
+
   renderContent = () => {
     if (this.state.content) {
-      return ReactHtmlParser(this.state.content);
+      return ReactHtmlParser(this.state.content.html);
     }
   };
 
@@ -75,6 +83,7 @@ class CMS extends Component {
     return (
       <div className={`mz-cms ${this.state.config.classes}`}>
         {this.state.isLoading && <BusySignal />}
+        {!this.state.isLoading && this.renderTitle()}
         {!this.state.isLoading && this.renderContent()}
       </div>
     );
