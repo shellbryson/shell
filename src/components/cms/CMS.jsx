@@ -111,25 +111,9 @@ class CMS extends Component {
   // ####################################################
 
   renderContent = () => {
-    let html = "";
     if (this.state.content) {
-      const c = this.state.content;
-      let layout = "";
-      if (c.tags) {
-        if (Utils.hasTag(c.tags, "#lane--split")) {
-          layout += " mz-lane--split";
-        }
-        if (Utils.hasTag(c.tags, "#lane--carousel")) {
-          layout += " mz-lane--carousel";
-        }
-      }
-      if (c.feature_image) {
-        html += `<div class="mz-lane mz-lane--background ${layout}" style="background-image:url(${c.feature_image})"><div class="mz-lane__inner">${c.html}</div></div>`;
-      } else {
-        html += c.html;
-      }
+      return ReactHtmlParser(this.state.content);
     }
-    return ReactHtmlParser(html);
   };
 
   render() {
