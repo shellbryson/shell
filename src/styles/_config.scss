@@ -1,0 +1,57 @@
+// ############################################################################
+// Config
+// ############################################################################
+
+$base-font: 'PT Sans', sans-serif;
+$base-font-body: 'PT Sans', sans-serif;
+$base-font-bold: 'PT Sans', sans-serif;
+$base-font-medium: 'PT Sans', sans-serif;
+$base-font-heading: 'PT Sans Narrow', sans-serif;
+
+$base-font-heading-write: 'EB Garamond', serif;
+$base-font-body-write: 'EB Garamond', serif;
+
+$base-font-heading-code: 'Ubuntu Mono', monospace;
+$base-font-body-code: 'Ubuntu Mono', monospace;
+
+// Breakpoint config
+$xsmall: 500px;
+$xsmall-max: 499px;
+$small: 768px;
+$small-max: 767px;
+$medium: 1024px;
+$medium-max: 1023px;
+$large: 1200px;
+$large-max: 1199px;
+$xlarge: 1440px;
+$xlarge-max: 1439px;
+$xxlarge: 1600px;
+$xxlarge-max: 1599px;
+$xxxlarge: 1900px;
+$xxxlarge-max: 1899px;
+$xxxxlarge: 2400px;
+$xxxxlarge-max: 2399px;
+
+// Form inputs
+$input-size: 28px;
+$input-size-sm: 32px;
+
+// Common element sizes
+$button-size-toolbar: 40px;
+
+// Animation defaults
+$animation-speed: 300ms;
+$animation-speed-fast: 100ms;
+$animation-speed-slow: 600ms;
+
+// Scrollbars
+$layout-scrollbar-width: 4px;
+
+// ********************************************
+//	App max widths
+// ********************************************
+$layout-html-width: 2400px;
+$layout-head-width: 1440px;
+$layout-body-width: 1474px;
+// Point that we strip body padding (max-width + 1rem);
+$layout-unpad: $layout-body-width + 16px;
