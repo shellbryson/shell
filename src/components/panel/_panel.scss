@@ -1,0 +1,27 @@
+// ############################################################################
+// Component: CMS
+// ############################################################################
+
+.shell-panel {
+
+  display: block;
+  position: absolute;
+  right: 4rem;
+  top: 6rem;
+  padding: 2rem;
+  width: 800px;
+  transform: perspective(600px) rotateY(-20deg);
+  transition: $animation-speed-slow;
+  transition-delay: 200ms;
+  background-color: rgba($color-black, 0.8);
+  color: $color-white;
+  border-radius: 4px;
+  min-height: 500px;
+  max-height: 800px;
+
+  a {
+    background-color: rgba($color-white, 0.1);
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+  }
+}
