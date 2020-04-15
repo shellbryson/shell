@@ -1,0 +1,47 @@
+// *****************************************************************************
+// * Standard breakpoints
+// *****************************************************************************
+
+@mixin xsmall {
+  @media (min-width: $xsmall)  { @content ; }
+}
+
+@mixin small {
+  @media (min-width: $small)  { @content ; }
+}
+
+@mixin medium {
+  @media (min-width: $medium)  { @content ; }
+}
+
+@mixin large {
+  @media (min-width: $large)  { @content ; }
+}
+
+@mixin xlarge {
+  @media (min-width: $xlarge)  { @content ; }
+}
+
+@mixin xxlarge {
+  @media (min-width: $xxlarge)  { @content ; }
+}
+
+@mixin xxxlarge {
+  @media (min-width: $xxxlarge)  { @content ; }
+}
+
+@mixin xxxxlarge {
+  @media (min-width: $xxxxlarge)  { @content ; }
+}
+
+// *****************************************************************************
+// * Arbitrary breakpoints for those edge cases
+// *****************************************************************************
+
+@mixin breakpoint($point) {
+  @media (min-width: $point) { @content ; }
+}
+
+@mixin breakpoint-max($point) {
+  @media (max-width: $point) { @content ; }
+}
