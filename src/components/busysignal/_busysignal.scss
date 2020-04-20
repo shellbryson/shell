@@ -1,0 +1,116 @@
+// ############################################################################
+// Component: BusySignal
+// ############################################################################
+
+.shell-busysignal {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 25% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: rotate-center 2s ease-in-out infinite both;
+
+  &--small {
+    // Width must be set to enable precise positioning
+    width: 50px;
+    height: 32px;
+    margin: 4px;
+    fill: $color-brand;
+
+    .shell-busysignal__signal {
+      margin: -15px 0 0 -15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  // If we have a message before the signal, reduce top margin
+  &--message {
+    margin: 5% auto 25%;
+  }
+
+  // If we're inside a button, reduce all the spacing
+  .shell-button & {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    // Width must be set to enable precise positioning
+    width: 50px;
+    height: 32px;
+
+    @include small {
+      top: 0;
+      height: 44px;
+    }
+
+    .shell-busysignal__signal {
+      margin: -15px 0 0 -15px;
+      width: 30px;
+      height: 30px;
+
+      & .path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  // If we're inside a button, reduce all the spacing
+  .shell-button--small & {
+
+    @include small {
+      top: 0;
+      height: 32px;
+    }
+  }
+
+  &__signal {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 40px;
+    height: 40px;
+
+    & .path {
+      stroke: $color-brand;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+.shell-busymessage {
+  margin: 2rem auto;
+  text-align: center;
+
+  p {
+    color: $color-brand;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

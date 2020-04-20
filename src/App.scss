@@ -1,21 +1,5 @@
 @import "styles/config.scss";
 @import "styles/colors.scss";
 @import "styles/mixins";
-
-
-body {
-  font-family: $base-font-body;
-}
-
-a {
-  color: $color-body;
-  border-bottom: 1px solid $color-body;
-  text-decoration: none;
-  transition: $animation-speed;
-
-  &:hover,
-  &:focus {
-    color: $color-link;
-    border-bottom: 1px solid $color-link-active;
-  }
-}
+@import "styles/internals/layout.scss";
+@import "styles/components.scss";
