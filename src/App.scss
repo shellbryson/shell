@@ -1,49 +1,5 @@
 @import "styles/config.scss";
 @import "styles/colors.scss";
 @import "styles/mixins";
+@import "styles/internals/layout.scss";
 @import "styles/components.scss";
-
-body {
-  font-family: $base-font-body;
-}
-
-a {
-  color: $color-body;
-  border-bottom: 1px solid $color-body;
-  text-decoration: none;
-  transition: $animation-speed;
-  background-color: rgba($color-body, 0.1);
-
-  &:hover,
-  &:focus {
-    color: $color-link;
-    border-bottom: 1px solid $color-link-active;
-  }
-}
-
-.shell {
-  display: block;
-  position: relative;
-  width: 100%;
-  min-width: 1024px;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  &__header {
-    display: block;
-    position: absolute;
-    top: 4rem;
-    left: 1rem;
-    padding: 3rem;
-    width: 300px;
-    background-color: rgba($color-black, 0.2);
-    border-radius: 4px;
-    transform: perspective(600px) rotateY(45deg);
-    transition: $animation-speed-slow;
-    transition-delay: 200ms;
-
-    &:hover {
-      transform: translateX(10px) perspective(600px) rotateY(40deg);
-    }
-  }
-}

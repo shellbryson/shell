@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, withRouter, Route, Switch, Redirect, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, withRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Bio from "components/bio/Bio";
 import Panel from "components/panel/Panel";
 

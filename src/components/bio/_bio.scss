@@ -1,22 +1,42 @@
 // ############################################################################
-// Component: CMS
+// Component: BIO
 // ############################################################################
 
 .shell-bio {
-
   display: block;
-  position: absolute;
-  top: 4rem;
-  left: 1rem;
-  padding: 3rem;
-  width: 300px;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  padding: 1rem;
   background-color: rgba($color-black, 0.2);
   border-radius: 4px;
-  transform: perspective(600px) rotateY(45deg);
   transition: $animation-speed-slow;
   transition-delay: 200ms;
+
+  @include medium {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 280px;
+    transform: perspective(600px) rotateY(45deg);
+    padding: 3rem;
+  }
 
   &:hover {
     transform: translateX(10px) perspective(600px) rotateY(40deg);
   }
+
+  a {
+    color: $color-body;
+    border-bottom: 1px solid $color-body;
+    text-decoration: none;
+    transition: $animation-speed;
+    background-color: rgba($color-body, 0.1);
+
+    &:hover,
+    &:focus {
+      color: $color-link;
+      border-bottom: 1px solid $color-link-active;
+    }
+  }
+
 }

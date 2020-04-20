@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 import CMS from 'components/cms/CMS';
 
 class Panel extends Component {
@@ -15,6 +16,8 @@ class Panel extends Component {
   // MIDDLEWARE
   // ####################################################
 
+
+
   // ####################################################
   // RENDER
   // ####################################################
@@ -22,7 +25,15 @@ class Panel extends Component {
   render() {
     return (
       <div className="shell-panel">
-        <CMS slug={this.state.slug} />
+        <CSSTransitionGroup
+          transitionAppear
+          transitionName="reveal"
+          transitionAppearTimeout={250}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          <CMS slug={this.state.slug} />
+        </CSSTransitionGroup>
       </div>
     );
   }
@@ -36,7 +47,8 @@ class Panel extends Component {
       if (nextProps.slug !== this.state.slug) {
         this.setState(
           {
-            slug: nextProps.slug
+            slug: nextProps.slug,
+            animate: true
           }
         );
       }
@@ -45,11 +57,10 @@ class Panel extends Component {
 
   componentDidMount() {
     if (this.props.slug) {
-      this.setState(
-        {
-          slug: this.props.slug,
-        }
-      );
+      this.setState({
+        animate: true,
+        slug: this.props.slug,
+      });
     }
   }
 
