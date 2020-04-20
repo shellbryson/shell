@@ -7,18 +7,19 @@
   max-width: 400px;
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: rgba($color-black, 0.2);
+  background-color: rgba($color-white, 0.2);
   border-radius: 4px;
   transition: $animation-speed-slow;
   transition-delay: 200ms;
+  backdrop-filter: blur(4px);
 
   @include medium {
     position: absolute;
     top: 4rem;
     left: 0;
-    width: 280px;
+    width: 300px;
     transform: perspective(600px) rotateY(45deg);
-    padding: 3rem;
+    padding: 2rem;
   }
 
   &:hover {

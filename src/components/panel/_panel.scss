@@ -5,10 +5,11 @@
 .shell-panel {
 
   display: block;
-  background-color: rgba($color-black, 0.6);
+  background-color: rgba($color-black, 0.4);
   color: $color-white;
   border-radius: 4px;
   border: 1px solid rgba($color-black, 0.2);
+  backdrop-filter: blur(4px);
 
   @include medium {
     position: absolute;
@@ -29,7 +30,7 @@
       min-height: 500px;
       max-height: 800px;
       content: "";
-      background-color: rgba($color-black, 0.1);
+      background-color: rgba($color-black, 0.4);
       border-radius: 4px;
       z-index: -1;
       margin-left: 8px;
