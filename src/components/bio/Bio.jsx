@@ -6,6 +6,7 @@ import PROFILE_IMAGE from "./assets/profile.png";
 import SOCIAL_GIT from "./assets/github.svg";
 import SOCIAL_TWITTER from "./assets/twitter.svg";
 import SOCIAL_PINTEREST from "./assets/pinterest.svg";
+import SOCIAL_LINKEDIN from "./assets/linkedin.svg";
 
 class Bio extends Component {
   state = {};
@@ -36,6 +37,12 @@ class Bio extends Component {
           className="shell-bio__social-icon"
         >
           <img src={SOCIAL_PINTEREST} alt="Pinterest icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/shellbryson/n"
+          className="shell-bio__social-icon"
+        >
+          <img src={SOCIAL_LINKEDIN} alt="LinkedIn icon" />
         </a>
         <a
           href="https://github.com/shellbryson"
