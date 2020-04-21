@@ -81,8 +81,8 @@ class CMS extends Component {
 
   render() {
     return (
-      <div className={`mz-cms ${this.state.config.classes}`}>
-        {this.state.isLoading && <BusySignal />}
+      <div className="shell-cms">
+        {this.state.isLoading && <BusySignal isLarge />}
         {!this.state.isLoading && this.renderTitle()}
         {!this.state.isLoading && this.renderContent()}
       </div>

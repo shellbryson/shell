@@ -4,43 +4,21 @@ class BusySignal extends Component {
   state = {};
 
   render() {
-    const cssClass = this.props.cssClass || "";
-    const isSmall = this.props.small ? "shell-busysignal--small" : "";
-    const signal = (
-      <div className="shell-busysignal__signal">
-        <svg className="spinner" viewBox="0 0 50 50">
-          <circle
-            className="path"
-            cx="25"
-            cy="25"
-            r="20"
-            fill="none"
-            strokeWidth="5"
-          />
-        </svg>
+    return (
+      <div className="shell-busysignal">
+        <div className={`shell-busysignal__signal ${this.props.isLarge ? "shell-busysignal__signal--large" : ""}`}>
+          <div className="sk-cube sk-cube1"></div>
+          <div className="sk-cube sk-cube2"></div>
+          <div className="sk-cube sk-cube3"></div>
+          <div className="sk-cube sk-cube4"></div>
+          <div className="sk-cube sk-cube5"></div>
+          <div className="sk-cube sk-cube6"></div>
+          <div className="sk-cube sk-cube7"></div>
+          <div className="sk-cube sk-cube8"></div>
+          <div className="sk-cube sk-cube9"></div>
+        </div>
       </div>
     );
-    let spinner;
-
-    if (this.props.message) {
-      spinner = (
-        <>
-          <div className="shell-busymessage">
-            <p>{this.props.message}</p>
-          </div>
-          <div className={`shell-busysignal shell-busysignal--message ${isSmall} ${cssClass}`}>
-            {signal}
-          </div>
-        </>
-      );
-    } else {
-      spinner = (
-        <>
-          <div className={`shell-busysignal ${isSmall} ${cssClass}`}>{signal}</div>
-        </>
-      );
-    }
-    return spinner;
   }
 }
 
