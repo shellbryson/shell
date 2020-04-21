@@ -4,13 +4,35 @@
 
 .shell-navigationtabs {
 
+  margin: 1rem;
+
   &__nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
   }
 
   &__link {
-    display: block;
-    width: 50%;
-    margin-right: 2px;
+    text-align: center;
+    border-top: 3px solid rgba($color-white, 0.1);
+    border-bottom: 1px solid $color-white;
+    line-height: 64px;
+    transition: $animation-speed;
+    background: linear-gradient(176deg, rgba(205,205,205,0.2959558823529411) 0%, rgba(69,115,247,0) 100%);
+    background-color: rgba($color-white, 0.1);
+    text-decoration: none;
+    color: $color-body-alt;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $color-primary;
+    }
+
+    &.active {
+      background: linear-gradient(176deg, rgba(97,127,191,0.427608543417367) 0%, rgba(69,115,247,0) 100%);
+      border-top: 3px solid $color-link-active;
+      border-bottom: 1px solid rgba($color-white, 0.1);
+      color: $color-white
+    }
   }
 }

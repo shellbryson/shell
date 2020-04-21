@@ -6,7 +6,6 @@
   display: block;
   max-width: 400px;
   margin-bottom: 1rem;
-  padding: 1rem;
   background-color: rgba($color-white, 0.2);
   border-radius: 4px;
   transition: $animation-speed-slow;
@@ -22,8 +21,68 @@
     transform: translateX(10px) perspective(600px) rotateY(40deg) rotateX(0deg);
   }
 
-  a {
+  // a {
+  //   display: inline-block;
+  //   padding: 0 4px;
+  //   color: $color-body;
+  //   border-bottom: 1px solid $color-body;
+  //   text-decoration: none;
+  //   transition: $animation-speed;
+  //   background-color: rgba($color-body, 0.1);
+
+  //   &:hover,
+  //   &:focus {
+  //     color: $color-link;
+  //     border-bottom: 1px solid $color-link-active;
+  //   }
+  // }
+
+  &__section {
+    margin-bottom: 1rem;
+    padding: 12px;
+    border-bottom: 1px solid $color-black;
+
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: $color-body-alt;
+    }
+  }
+
+  &__section-title {
+    margin: 0;
+    padding: 0 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-dividers-alt;
+    border-right: 30px solid $color-dividers-alt;
+    border-left: 4px solid $color-dividers-alt;
+    color: $color-body-alt;
+    font-weight: bold;
+  }
+
+  &__profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4px 0;
+    border-top: 1px solid $color-black;
+    transition: $animation-speed;
+    filter: saturate(0);
+
+    &:hover {
+      filter: saturate(1);
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__social-icon {
     display: inline-block;
+    margin: 4px;
     padding: 0 4px;
     color: $color-body;
     border-bottom: 1px solid $color-body;
@@ -36,64 +95,10 @@
       color: $color-link;
       border-bottom: 1px solid $color-link-active;
     }
-  }
-
-  & > h1 {
-    margin: 0;
-    padding: 0;
-  }
-
-  & > h2 {
-    margin: 0;
-    padding: 0;
-  }
-
-  &__section {
-    margin-top: 1rem;
-    border-top: 1px solid $color-black;
-
-    & > h2 {
-
-      text-transform: uppercase;
-      font-size: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  &__profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 4px 0;
-
-    border-top: 1px solid $color-black;
-    border-bottom: 1px solid $color-black;
-
-    transition: $animation-speed;
-
-          // -webkit-filter: grayscale(1);
-      filter: saturate(0);
-
-      &:hover {
-        filter: saturate(1);
-
-      }
-
-  }
-
-  &__social {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  &__social-icon {
-    display: block;
-    margin: 4px;
 
     img {
       display: block;
-      margin: 1rem;
-
+      margin: 12px;
     }
   }
 

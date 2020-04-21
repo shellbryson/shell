@@ -49,30 +49,33 @@ class Bio extends Component {
 
   renderProfile = () => {
     return (
-      <div className="shell-bio__section">
-        <h2>Social links</h2>
-        <div className="shell-bio__profile">
-          <div
-            className="shell-bio__avatar"
-            style={{ backgroundImage: `url(${PROFILE_IMAGE})` }}
-          ></div>
-          {this.renderSocial()}
+      <>
+        <div className="shell-bio__section-title">
+          Social links
         </div>
-      </div>
+        <div className="shell-bio__section">
+          <div className="shell-bio__profile">
+            <div
+              className="shell-bio__avatar"
+              style={{ backgroundImage: `url(${PROFILE_IMAGE})` }}
+            ></div>
+            {this.renderSocial()}
+          </div>
+        </div>
+      </>
     );
   }
 
   render() {
     return (
       <header className="shell-bio">
-        <h1>Shell Bryson</h1>
-        <h2>Writer, web engineer</h2>
-        <p>
-          Find me on twitter:{" "}
-          <a href="https://twitter.com/shellbryson">@shellbryson</a>
-        </p>
+        <div className="shell-bio__section-title">Profile</div>
+        <div className="shell-bio__section">
+          <h1>Shell Bryson</h1>
+          <h2>Writer, web engineer</h2>
+        </div>
         <NavigationTabs />
-        { this.renderProfile() }
+        {this.renderProfile()}
       </header>
     );
   }
