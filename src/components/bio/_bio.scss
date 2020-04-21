@@ -6,26 +6,84 @@
   display: block;
   max-width: 400px;
   margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: rgba($color-black, 0.2);
+  background-color: rgba($color-white, 0.2);
   border-radius: 4px;
   transition: $animation-speed-slow;
   transition-delay: 200ms;
+  backdrop-filter: blur(3px);
+  z-index: 2;
 
   @include medium {
     position: absolute;
     top: 4rem;
     left: 0;
-    width: 280px;
-    transform: perspective(600px) rotateY(45deg);
-    padding: 3rem;
+    width: 300px;
+    transform: translateX(10px) perspective(600px) rotateY(40deg) rotateX(0deg);
   }
 
-  &:hover {
-    transform: translateX(10px) perspective(600px) rotateY(40deg);
+  // a {
+  //   display: inline-block;
+  //   padding: 0 4px;
+  //   color: $color-body;
+  //   border-bottom: 1px solid $color-body;
+  //   text-decoration: none;
+  //   transition: $animation-speed;
+  //   background-color: rgba($color-body, 0.1);
+
+  //   &:hover,
+  //   &:focus {
+  //     color: $color-link;
+  //     border-bottom: 1px solid $color-link-active;
+  //   }
+  // }
+
+  &__section {
+    margin-bottom: 1rem;
+    padding: 12px;
+    border-bottom: 1px solid $color-black;
+
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0;
+      color: $color-body-alt;
+    }
   }
 
-  a {
+  &__section-title {
+    margin: 0;
+    padding: 0 4px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-dividers-alt;
+    border-right: 30px solid $color-dividers-alt;
+    border-left: 4px solid $color-dividers-alt;
+    color: $color-body-alt;
+    font-weight: bold;
+  }
+
+  &__profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4px 0;
+    border-top: 1px solid $color-black;
+    transition: $animation-speed;
+    filter: saturate(0);
+
+    &:hover {
+      filter: saturate(1);
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__social-icon {
+    display: inline-block;
+    margin: 4px;
+    padding: 0 4px;
     color: $color-body;
     border-bottom: 1px solid $color-body;
     text-decoration: none;
@@ -37,6 +95,17 @@
       color: $color-link;
       border-bottom: 1px solid $color-link-active;
     }
+
+    img {
+      display: block;
+      margin: 12px;
+    }
+  }
+
+  &__avatar {
+    margin: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
 }

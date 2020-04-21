@@ -32,7 +32,9 @@ class Panel extends Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}
         >
-          <CMS slug={this.state.slug} />
+          <div className="shell-panel__content">
+            <CMS slug={this.state.slug} />
+          </div>
         </CSSTransitionGroup>
       </div>
     );

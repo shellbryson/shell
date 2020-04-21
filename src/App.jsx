@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, withRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Bio from "components/bio/Bio";
 import Panel from "components/panel/Panel";
+import Background from "components/background/Background";
 
 class App extends Component {
 
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <Router>
         <div className="shell">
+          <Background />
           <Bio />
           <Switch>
             <Route

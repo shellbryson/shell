@@ -1,0 +1,19 @@
+// ############################################################################
+// Component: BIO
+// ############################################################################
+
+.shell-background {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: translate3d(0,0,0);
+
+  // Hack: this fixes iOS Safari intersecting 3D objects where it should not
+  -webkit-transform: translateZ(-1000px);
+}

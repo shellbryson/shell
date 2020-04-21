@@ -5,27 +5,41 @@
 .shell-panel {
 
   display: block;
-  padding: 2rem;
-  transition: $animation-speed-slow;
-  transition-delay: 200ms;
-  background-color: rgba($color-black, 0.8);
+  background-color: rgba($color-black, 0.4);
   color: $color-white;
   border-radius: 4px;
-
-  @include small {
-
-  }
+  border: 1px solid rgba($color-black, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 2;
 
   @include medium {
     position: absolute;
     width: calc(100% - 350px);
-
-    max-width: 800px;
     right: 4rem;
     top: 6rem;
     min-height: 500px;
     max-height: 800px;
-    transform: perspective(600px) rotateY(-20deg);
+    max-width: 800px;
+    transform: perspective(600px) rotateY(-20deg) rotateX(-4deg);
+
+    &::before {
+      position: absolute;
+      width: 100%;
+
+      max-width: 800px;
+      min-height: 500px;
+      max-height: 800px;
+      content: "";
+      background-color: rgba($color-black, 0.4);
+      border-radius: 4px;
+      z-index: -1;
+      margin-left: 8px;
+      margin-top: 8px;
+    }
+  }
+
+  &__content {
+    margin: 2rem;
   }
 
   a {
