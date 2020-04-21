@@ -12,6 +12,7 @@
   transition: $animation-speed-slow;
   transition-delay: 200ms;
   backdrop-filter: blur(3px);
+  z-index: 2;
 
   @include medium {
     position: absolute;
