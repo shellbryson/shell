@@ -11,21 +11,21 @@
   border-radius: 4px;
   transition: $animation-speed-slow;
   transition-delay: 200ms;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
 
   @include medium {
     position: absolute;
     top: 4rem;
     left: 0;
     width: 300px;
-    transform: perspective(600px) rotateY(45deg);
+    transform: perspective(600px) rotateY(45deg) rotateX(-1deg);
     padding: 2rem;
   }
 
   &:hover {
 
     @include medium {
-      transform: translateX(10px) perspective(600px) rotateY(40deg);
+      transform: translateX(10px) perspective(600px) rotateY(40deg) rotateX(0deg);
     }
   }
 
