@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Bio:
   - Add: Bio image
-  - Add: Social links
+  - Add: Social links (https://simpleicons.org/)
   - Fix: many iOS glitches fixed
 
 ## [0.4.0] - 2020-04-20
