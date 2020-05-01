@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CSSTransitionGroup } from 'react-transition-group';
 import CMS from 'components/cms/CMS';
+import TwitterFeed from 'components/twitterfeed/TwitterFeed';
 
 class Panel extends Component {
   state = {
@@ -22,7 +23,20 @@ class Panel extends Component {
   // RENDER
   // ####################################################
 
+  renderContent = () => {
+    let page;
+    switch (this.state.slug) {
+      case "social":
+        page = <TwitterFeed />
+        break;
+      default:
+        page = <CMS slug={this.state.slug} />;
+    }
+    return page;
+  }
+
   render() {
+
     return (
       <div className="shell-panel">
         <CSSTransitionGroup
@@ -33,7 +47,7 @@ class Panel extends Component {
           transitionLeaveTimeout={300}
         >
           <div className="shell-panel__content">
-            <CMS slug={this.state.slug} />
+            {this.renderContent()}
           </div>
         </CSSTransitionGroup>
       </div>
