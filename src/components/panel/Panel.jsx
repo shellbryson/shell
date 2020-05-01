@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
+import { NavLink } from "react-router-dom";
 import CMS from 'components/cms/CMS';
+import TwitterFeed from 'components/twitterfeed/TwitterFeed';
 
 class Panel extends Component {
   state = {
@@ -16,26 +17,64 @@ class Panel extends Component {
   // MIDDLEWARE
   // ####################################################
 
-
-
   // ####################################################
   // RENDER
   // ####################################################
 
+  renderHeader = () => {
+    return (
+      <>
+        <div className="shell-panel__title"></div>
+        <div className="shell-panel__actions">
+          <NavLink className="shell-panel__action" to="/writer">
+            Writer
+          </NavLink>
+          <NavLink className="shell-panel__action" to="/engineer">
+            Engineer
+          </NavLink>
+          <NavLink className="shell-panel__action" to="/social">
+            Social
+          </NavLink>
+          <NavLink className="shell-panel__action" to="/bio">
+            Bio
+          </NavLink>
+        </div>
+      </>
+    );
+  }
+
+  renderFooter = () => {
+    return (
+      <div className="shell-panel__footer-inner">
+
+      </div>
+    )
+  }
+
+  renderContent = () => {
+    let page;
+    switch (this.state.slug) {
+      case "social":
+        page = (
+          <>
+            <CMS slug={this.state.slug} />
+            <TwitterFeed />
+          </>
+        );
+        break;
+      default:
+        page = <CMS slug={this.state.slug} />;
+    }
+    return page;
+  }
+
   render() {
+
     return (
       <div className="shell-panel">
-        <CSSTransitionGroup
-          transitionAppear
-          transitionName="reveal"
-          transitionAppearTimeout={250}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-        >
-          <div className="shell-panel__content">
-            <CMS slug={this.state.slug} />
-          </div>
-        </CSSTransitionGroup>
+        <div className="shell-panel__header">{this.renderHeader()}</div>
+        <div className="shell-panel__content">{this.renderContent()}</div>
+        <div className="shell-panel__footer">{this.renderFooter()}</div>
       </div>
     );
   }

@@ -7,6 +7,7 @@ import SOCIAL_GIT from "./assets/github.svg";
 import SOCIAL_TWITTER from "./assets/twitter.svg";
 import SOCIAL_PINTEREST from "./assets/pinterest.svg";
 import SOCIAL_LINKEDIN from "./assets/linkedin.svg";
+import Utils from 'utils/Utils';
 
 class Bio extends Component {
   state = {};
@@ -73,6 +74,16 @@ class Bio extends Component {
     );
   }
 
+  renderVersion = () => {
+    const d = new Date();
+    return (
+      <div className="shell-bio__version">
+        <span>{Utils.version()}</span>|
+        <span>© {d.getFullYear()} Shell Bryson</span>
+      </div>
+    );
+  }
+
   render() {
     return (
       <header className="shell-bio">
@@ -83,6 +94,7 @@ class Bio extends Component {
         </div>
         <NavigationTabs />
         {this.renderProfile()}
+        {this.renderVersion()}
       </header>
     );
   }

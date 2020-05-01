@@ -4,59 +4,130 @@
 
 .shell-panel {
 
+  $panel-header-size: 54px;
+  $panel-footer-size: 80px;
+
   display: block;
-  background-color: rgba($color-black, 0.4);
   color: $color-white;
-  border-radius: 4px;
-  border: 1px solid rgba($color-black, 0.2);
   backdrop-filter: blur(3px);
   z-index: 2;
 
   @include medium {
+    display: flex;
     position: absolute;
-    width: calc(100% - 350px);
-    right: 4rem;
+    height: 100%;
+    width: calc(100% - 400px);
+    left: 280px;
     top: 6rem;
+    flex-direction: column;
     min-height: 500px;
     max-height: 800px;
     max-width: 800px;
     transform: perspective(600px) rotateY(-20deg) rotateX(-4deg);
+    overflow: hidden;
+  }
 
-    &::before {
-      position: absolute;
+  @include breakpoint(1140px) {
+    width: calc(100% - 420px);
+  }
+
+  @include large {
+    width: calc(100% - 370px);
+  }
+
+  &__header {
+    display: flex;
+    height: $panel-header-size;
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(3px);
+    margin-bottom: 2px;
+  }
+
+  &__title {
+    display: none;
+
+    @include large {
+      display: block;
       width: 100%;
-
-      max-width: 800px;
-      min-height: 500px;
-      max-height: 800px;
-      content: "";
-      background-color: rgba($color-black, 0.4);
-      border-radius: 4px;
-      z-index: -1;
-      margin-left: 8px;
-      margin-top: 8px;
+      margin: 0;
+      padding: 6px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-dividers-alt;
+      border-left: 30px solid $color-dividers-alt;
+      border-right: 4px solid $color-dividers-alt;
+      color: $color-body-alt;
+      font-weight: bold;
     }
   }
 
   &__content {
-    margin: 2rem;
+    @include scrollbars;
+    margin: 1px;
+    padding: 1rem;
+    border: 1px solid red;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba($color-black, 0.4);
+    border: 1px solid rgba($color-black, 0.2);
+
+    p {
+      font-size: 1.1rem;
+      color: $color-body;
+    }
+
+    a {
+      color: $color-body;
+    }
   }
 
-  a {
+  &__footer {
+    display: block;
+    height: $panel-footer-size;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-left: 1px solid $color-body-alt;
+    border-right: 1px solid $color-body-alt;
+
+    @include large {
+      width: auto;
+    }
+  }
+
+  &__action {
+    display: block;
+    padding: 4px 1rem;
+    background: linear-gradient(176deg, rgba(205,205,205,0.2959558823529411) 0%, rgba(69,115,247,0) 100%);
     background-color: rgba($color-white, 0.1);
+
+    color: $color-body-alt;
+    font-size: 1.2rem;
+    font-family: $base-font-heading;
+    text-decoration: none;
+    border-top: 3px solid rgba($color-white, 0.1);
     border-bottom: 1px solid $color-white;
-    color: $color-white;
-  }
 
-  .reveal-appear {
-    position: absolute;
-    opacity: 0.01;
-    transform: translateY(-10px);
-  }
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $color-primary;
+    }
 
-  .reveal-appear.reveal-appear-active {
-    opacity: 1;
-    transition: opacity .5s ease-in;
-    transform: translateY(0);
+    &.active {
+      @include text-shadow;
+      background: linear-gradient(176deg, rgba(97,127,191,0.427608543417367) 0%, rgba(69,115,247,0) 100%);
+      border-top: 3px solid $color-link-active;
+      border-bottom: 1px solid rgba($color-white, 0.1);
+      color: $color-white;
+    }
   }
 }

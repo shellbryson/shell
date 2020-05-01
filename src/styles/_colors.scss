@@ -11,9 +11,10 @@ $color-primary: #4573f7;
 // Named:
 $color-body-alt: #181717;
 $color-body: #f1f5ff;
+$color-text-shadow: $color-primary;
+$color-text-shadow-alt: $color-body;
 $color-brand: $color-black;
 $color-link: $color-action;
 $color-link-active: $color-primary;
-
-$color-dividers: rgba($color-white, 0.1);;
+$color-dividers: rgba($color-white, 0.9);
 $color-dividers-alt: rgba($color-black, 0.1);

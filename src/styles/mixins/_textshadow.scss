@@ -1,0 +1,7 @@
+@mixin text-shadow {
+  text-shadow: 1px 1px 0 $color-text-shadow;
+}
+
+@mixin text-shadow-alt {
+  text-shadow: 1px 1px 0 $color-text-shadow-alt;
+}

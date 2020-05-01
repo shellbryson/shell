@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.7.0] - 2020-05-01
+
+### Changes
+
+- Writing:
+  - Add: expanded writing panels
+
+- General:
+  - Fix: bio panel rotation
+  - Add: in-page navigation
+  - Add: new Social content section
+  - Add: load twitter stream
+  - Add: new Bio content
+  - Add: display version and copyright
+  - Change: blur background
+
 ## [0.6.0] - 2020-04-21
 
 ### Changes

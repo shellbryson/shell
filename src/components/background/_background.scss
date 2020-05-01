@@ -13,7 +13,4 @@
   background-repeat: no-repeat;
   z-index: -1;
   transform: translate3d(0,0,0);
-
-  // Hack: this fixes iOS Safari intersecting 3D objects where it should not
-  -webkit-transform: translateZ(-1000px);
 }
