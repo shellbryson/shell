@@ -1,4 +1,5 @@
 // Please keep these methods in alphabetical order...
+import { version } from "../../package.json";
 
 const Utils = {
 
@@ -54,7 +55,13 @@ const Utils = {
       // Jump to top (mobile/small)
       window.scrollTo(0, 0);
     }
+  },
+
+  version: () => {
+    return version;
   }
+
+
 };
 
 export default Utils;

@@ -11,7 +11,8 @@ $color-primary: #4573f7;
 // Named:
 $color-body-alt: #181717;
 $color-body: #f1f5ff;
-$color-text-shadow: rgba($color-body-alt, 0.5);
+$color-text-shadow: $color-primary;
+$color-text-shadow-alt: $color-body;
 $color-brand: $color-black;
 $color-link: $color-action;
 $color-link-active: $color-primary;

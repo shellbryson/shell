@@ -12,6 +12,7 @@
     width: 40px;
     height: 40px;
     margin: 0 auto;
+    padding: 0;
 
     &--large {
       width: 300px;
@@ -20,7 +21,6 @@
   }
 
   .sk-cube {
-    border-radius: 4px;
     background-color: rgba($color-white, 0.1);
     animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
   }

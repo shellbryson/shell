@@ -2,17 +2,9 @@
 // Config
 // ############################################################################
 
-$base-font: 'PT Sans', sans-serif;
-$base-font-body: 'PT Sans', sans-serif;
-$base-font-bold: 'PT Sans', sans-serif;
-$base-font-medium: 'PT Sans', sans-serif;
-$base-font-heading: 'PT Sans Narrow', sans-serif;
-
-$base-font-heading-write: 'EB Garamond', serif;
-$base-font-body-write: 'EB Garamond', serif;
-
-$base-font-heading-code: 'Ubuntu Mono', monospace;
-$base-font-body-code: 'Ubuntu Mono', monospace;
+$base-font: 'Roboto', sans-serif;
+$base-font-body: 'Roboto', sans-serif;
+$base-font-heading: 'Rajdhani', sans-serif;
 
 // Breakpoint config
 $xsmall: 500px;
@@ -45,7 +37,7 @@ $animation-speed-fast: 100ms;
 $animation-speed-slow: 600ms;
 
 // Scrollbars
-$scrollbar-width: 4px;
+$scrollbar-width: 2px;
 
 // ********************************************
 //	App max widths

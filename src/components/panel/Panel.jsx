@@ -24,7 +24,7 @@ class Panel extends Component {
   renderHeader = () => {
     return (
       <>
-        <div className="shell-panel__title">{this.state.slug}</div>
+        <div className="shell-panel__title"></div>
         <div className="shell-panel__actions">
           <NavLink className="shell-panel__action" to="/writer">
             Writer

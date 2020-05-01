@@ -38,6 +38,7 @@
     margin: 0;
     padding: 6px;
     font-size: 0.75rem;
+    font-family: $base-font-heading;
     text-transform: uppercase;
     border-bottom: 1px solid $color-dividers-alt;
     border-right: 30px solid $color-dividers-alt;
@@ -90,6 +91,19 @@
     margin: 4px;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  &__version {
+    text-align: right;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    font-family: $base-font-heading;
+
+    color: rgba($color-body-alt, 0.5);
+
+    span {
+      margin: 0 4px;
+    }
   }
 
 }

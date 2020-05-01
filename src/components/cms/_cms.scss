@@ -2,6 +2,12 @@
 // Component: CMS
 // ############################################################################
 
-.shell-content {
+.shell-cms {
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $base-font-heading;
+  }
 }
