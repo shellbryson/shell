@@ -24,6 +24,11 @@ class App extends Component {
               render={(props) => <Panel slug="social" {...props} />}
             ></Route>
             <Route
+              path="/bio"
+              exact
+              render={(props) => <Panel slug="bio" {...props} />}
+            ></Route>
+            <Route
               path="/engineer"
               exact
               render={(props) => <Panel slug="engineer" {...props} />}

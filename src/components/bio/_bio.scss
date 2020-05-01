@@ -21,22 +21,6 @@
     transform: translateX(10px) perspective(600px) rotateY(20deg) rotateX(0deg);
   }
 
-  // a {
-  //   display: inline-block;
-  //   padding: 0 4px;
-  //   color: $color-body;
-  //   border-bottom: 1px solid $color-body;
-  //   text-decoration: none;
-  //   transition: $animation-speed;
-  //   background-color: rgba($color-body, 0.1);
-
-  //   &:hover,
-  //   &:focus {
-  //     color: $color-link;
-  //     border-bottom: 1px solid $color-link-active;
-  //   }
-  // }
-
   &__section {
     margin-bottom: 1rem;
     padding: 12px;
@@ -52,7 +36,7 @@
 
   &__section-title {
     margin: 0;
-    padding: 0 4px;
+    padding: 6px;
     font-size: 0.75rem;
     text-transform: uppercase;
     border-bottom: 1px solid $color-dividers-alt;

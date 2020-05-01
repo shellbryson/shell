@@ -4,4 +4,28 @@
 
 .shell-twitterfeed {
 
+  &__loading {
+    display: flex;
+  }
+
+  &__busy {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem;
+  }
+
+  &__message {
+    color: $color-body;
+    text-decoration: none;
+    border-bottom: none;
+
+    a {
+      color: $color-body;
+    }
+  }
+
+  .twitter-timeline {
+    text-decoration: none;
+    border: none;
+  }
 }
