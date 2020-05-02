@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import CMS from 'components/cms/CMS';
 import TwitterFeed from 'components/twitterfeed/TwitterFeed';
+import Sidebar from 'components/sidebar/Sidebar';
+import Footer from 'components/footer/Footer';
 
 class Panel extends Component {
   state = {
@@ -43,14 +45,6 @@ class Panel extends Component {
     );
   }
 
-  renderFooter = () => {
-    return (
-      <div className="shell-panel__footer-inner">
-
-      </div>
-    )
-  }
-
   renderContent = () => {
     let page;
     switch (this.state.slug) {
@@ -73,8 +67,15 @@ class Panel extends Component {
     return (
       <div className="shell-panel">
         <div className="shell-panel__header">{this.renderHeader()}</div>
-        <div className="shell-panel__content">{this.renderContent()}</div>
-        <div className="shell-panel__footer">{this.renderFooter()}</div>
+        <div className="shell-panel__split">
+          <div className="shell-panel__content">{this.renderContent()}</div>
+          <div className="shell-panel__sidebar">
+            <Sidebar />
+          </div>
+        </div>
+        <div className="shell-panel__footer">
+          <Footer />
+        </div>
       </div>
     );
   }
