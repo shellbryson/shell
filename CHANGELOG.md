@@ -7,12 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changes
 
-- Sidebars:
-  - Add:
-
 - General:
-  - Fix: Standardise buttons
   - Add: Icons
+  - Fix: Standardise buttons
+  - Fix: Strip background to fix Safari rendering issue
 
 ## [0.8.0] - 2020-05-03
 

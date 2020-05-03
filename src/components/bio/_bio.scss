@@ -24,13 +24,14 @@
   &__section {
     margin-bottom: 1rem;
     padding: 12px;
-    border-bottom: 1px solid $color-black;
+    border-bottom: 1px solid $color-borders;
 
     h1,
     h2 {
       margin: 0;
       padding: 0;
       color: $color-body-alt;
+      font-family: $base-font-heading;
     }
   }
 
@@ -40,9 +41,9 @@
     font-size: 0.75rem;
     font-family: $base-font-heading;
     text-transform: uppercase;
-    border-bottom: 1px solid $color-dividers-alt;
-    border-right: 30px solid $color-dividers-alt;
-    border-left: 4px solid $color-dividers-alt;
+    border-bottom: 1px solid $color-borders;
+    border-right: 30px solid $color-borders;
+    border-left: 4px solid $color-borders;
     color: $color-body-alt;
     font-weight: bold;
   }
@@ -51,7 +52,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 4px 0;
-    border-top: 1px solid $color-black;
+    border-top: 1px solid $color-borders;
     transition: $animation-speed;
     filter: saturate(0);
 

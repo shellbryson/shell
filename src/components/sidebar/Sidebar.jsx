@@ -1,21 +1,7 @@
 import React, { Component } from 'react';
-// import { NavLink } from "react-router-dom";
-// import CMS from 'components/cms/CMS';
-
-import Shatter from "components/shatter/Shatter";
 
 class Sidebar extends Component {
-  state = {
-
-  };
-
-  // ####################################################
-  // API
-  // ####################################################
-
-  // ####################################################
-  // MIDDLEWARE
-  // ####################################################
+  state = { };
 
   // ####################################################
   // RENDER
@@ -25,7 +11,7 @@ class Sidebar extends Component {
 
     return (
       <div className="shell-sidebar">
-        <Shatter />
+
       </div>
     );
   }

@@ -8,6 +8,7 @@ import { faCommentAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
 import CMS from 'components/cms/CMS';
+import Feed from 'components/feed/Feed';
 import TwitterFeed from 'components/twitterfeed/TwitterFeed';
 import Sidebar from 'components/sidebar/Sidebar';
 import Footer from 'components/footer/Footer';
@@ -56,7 +57,12 @@ class Panel extends Component {
         );
         break;
       default:
-        page = <CMS slug={this.state.slug} />;
+        page = (
+          <>
+            <CMS slug={this.state.slug} />
+            <Feed slug={this.state.slug} />
+          </>
+        );
     }
     return page;
   }
