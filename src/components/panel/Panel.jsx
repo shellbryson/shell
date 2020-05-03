@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenFancy } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCommentAlt } from "@fortawesome/free-solid-svg-icons";
+import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
+
 import CMS from 'components/cms/CMS';
 import TwitterFeed from 'components/twitterfeed/TwitterFeed';
 import Sidebar from 'components/sidebar/Sidebar';
@@ -12,14 +19,6 @@ class Panel extends Component {
   };
 
   // ####################################################
-  // API
-  // ####################################################
-
-  // ####################################################
-  // MIDDLEWARE
-  // ####################################################
-
-  // ####################################################
   // RENDER
   // ####################################################
 
@@ -29,16 +28,16 @@ class Panel extends Component {
         <div className="shell-panel__title"></div>
         <div className="shell-panel__actions">
           <NavLink className="shell-button" to="/writer">
-            Writer
+            Writer <FontAwesomeIcon icon={faPenFancy} />
           </NavLink>
           <NavLink className="shell-button" to="/engineer">
-            Engineer
+            Engineer <FontAwesomeIcon icon={faCode} />
           </NavLink>
           <NavLink className="shell-button" to="/social">
-            Social
+            Social <FontAwesomeIcon icon={faCommentAlt} />
           </NavLink>
           <NavLink className="shell-button" to="/bio">
-            Bio
+            Bio <FontAwesomeIcon icon={faUserAlt} />
           </NavLink>
         </div>
       </>

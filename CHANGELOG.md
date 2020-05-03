@@ -10,6 +10,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Sidebars:
   - Add:
 
+- General:
+  - Fix: Standardise buttons
+  - Add: Icons
+
 ## [0.8.0] - 2020-05-03
 
 ### Changes
