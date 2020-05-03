@@ -28,16 +28,16 @@ class Panel extends Component {
       <>
         <div className="shell-panel__title"></div>
         <div className="shell-panel__actions">
-          <NavLink className="shell-panel__action" to="/writer">
+          <NavLink className="shell-button" to="/writer">
             Writer
           </NavLink>
-          <NavLink className="shell-panel__action" to="/engineer">
+          <NavLink className="shell-button" to="/engineer">
             Engineer
           </NavLink>
-          <NavLink className="shell-panel__action" to="/social">
+          <NavLink className="shell-button" to="/social">
             Social
           </NavLink>
-          <NavLink className="shell-panel__action" to="/bio">
+          <NavLink className="shell-button" to="/bio">
             Bio
           </NavLink>
         </div>

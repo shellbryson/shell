@@ -10,10 +10,10 @@ class NavigationTabs extends Component {
     return (
       <nav className="shell-navigationtabs">
         <div className="shell-navigationtabs__nav">
-          <NavLink to="/writer" className="shell-navigationtabs__link">
+          <NavLink to="/writer" className="shell-button">
             Writer
           </NavLink>
-          <NavLink to="/engineer" className="shell-navigationtabs__link">
+          <NavLink to="/engineer" className="shell-button">
             Engineer
           </NavLink>
         </div>
