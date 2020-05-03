@@ -33,6 +33,18 @@
       color: $color-body-alt;
       font-family: $base-font-heading;
     }
+
+    h1 {
+      @include text-shadow-alt-left;
+      padding-left: 6px;
+    }
+
+    h2 {
+      @include text-shadow-alt-left-shallow;
+      padding-left: 1px;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
   }
 
   &__section-title {
