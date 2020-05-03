@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+
+import Shatter from "components/shatter/Shatter";
 
 class Footer extends Component {
   state = {
@@ -22,7 +24,7 @@ class Footer extends Component {
 
     return (
       <div className="shell-footer">
-        Footer
+        <Shatter />
       </div>
     );
   }

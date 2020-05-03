@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
-import CMS from 'components/cms/CMS';
+// import { NavLink } from "react-router-dom";
+// import CMS from 'components/cms/CMS';
+
+import Shatter from "components/shatter/Shatter";
 
 class Sidebar extends Component {
   state = {
@@ -23,7 +25,7 @@ class Sidebar extends Component {
 
     return (
       <div className="shell-sidebar">
-        Sidebar
+        <Shatter />
       </div>
     );
   }
