@@ -11,7 +11,7 @@ class Sidebar extends Component {
 
     return (
       <div className="shell-sidebar">
-
+        {this.props.children}
       </div>
     );
   }

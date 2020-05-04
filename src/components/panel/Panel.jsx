@@ -12,6 +12,7 @@ import Feed from 'components/feed/Feed';
 import TwitterFeed from 'components/twitterfeed/TwitterFeed';
 import Sidebar from 'components/sidebar/Sidebar';
 import Footer from 'components/footer/Footer';
+import LinkGrid from 'components/linkgrid/LinkGrid';
 
 class Panel extends Component {
   state = {
@@ -67,20 +68,51 @@ class Panel extends Component {
     return page;
   }
 
-  render() {
+  renderSidebar = () => {
+    let sidebar;
+    switch (this.state.slug) {
+      case "engineer":
+        const c = {
+          links: [
+            { url: "https://codepen.io/shellbryson/", title: "Codepen", description: "Code experiments" },
+            { url: "https://github.com/shellbryson/", title: "Github", description: "Source code for various projects" },
+          ],
+        };
+        sidebar = (
+          <Sidebar>
+            <LinkGrid settings={c} />
+          </Sidebar>
+        );
+        break;
+      default:
+        sidebar = (
+          <Sidebar>
+          </Sidebar>
+        );
+    }
+    return sidebar;
+  }
+
+  renderLayout = () => {
 
     return (
-      <div className="shell-panel">
-        <div className="shell-panel__header">{this.renderHeader()}</div>
+      <>
         <div className="shell-panel__split">
           <div className="shell-panel__content">{this.renderContent()}</div>
-          <div className="shell-panel__sidebar">
-            <Sidebar />
-          </div>
+          <div className="shell-panel__sidebar">{this.renderSidebar()}</div>
         </div>
         <div className="shell-panel__footer">
           <Footer />
         </div>
+      </>
+    );
+  }
+
+  render() {
+    return (
+      <div className="shell-panel">
+        <div className="shell-panel__header">{this.renderHeader()}</div>
+        {this.renderLayout()}
       </div>
     );
   }
