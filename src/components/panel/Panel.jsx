@@ -13,6 +13,7 @@ import TwitterFeed from 'components/twitterfeed/TwitterFeed';
 import Sidebar from 'components/sidebar/Sidebar';
 import Footer from 'components/footer/Footer';
 import LinkGrid from 'components/linkgrid/LinkGrid';
+import SkillGrid from 'components/skillgrid/SkillGrid';
 
 class Panel extends Component {
   state = {
@@ -81,6 +82,7 @@ class Panel extends Component {
         sidebar = (
           <Sidebar>
             <LinkGrid settings={c} />
+            <SkillGrid />
           </Sidebar>
         );
         break;

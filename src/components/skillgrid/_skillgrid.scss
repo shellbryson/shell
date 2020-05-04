@@ -1,0 +1,56 @@
+// ############################################################################
+// Component: SKILL GRID
+// ############################################################################
+
+.shell-skillgrid {
+  margin: 1rem 0;
+
+  @include medium {
+    margin: 1rem;
+  }
+
+  &__skills {
+    @include scrollbars;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    max-height: 400px;
+    overflow: auto;
+
+    @include medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include large {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__skill {
+    display: block;
+    padding: 4px;
+    margin: 0;
+    text-decoration: none;
+    color: $color-body;
+    transition: $animation-speed;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 2rem;
+
+    &.set_0 {
+      background-color: $col0;
+    }
+    &.set_1 {
+      background-color: $col1;
+    }
+    &.set_2 {
+      background-color: $col2;
+    }
+    &.set_3 {
+      background-color: $col3;
+    }
+    &.set_4 {
+      background-color: $col4;
+    }
+  }
+}
