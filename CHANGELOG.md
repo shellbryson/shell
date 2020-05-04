@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.10.0] - 2020-05-04
+
+### Changes
+
+- General:
+  - Add: content sidebar links
+
+## [0.9.0] - 2020-05-03
+
+### Changes
+
+- General:
+  - Add: Icons
+  - Fix: Standardise buttons
+  - Fix: Strip background to fix Safari rendering issue
+
 ## [0.8.0] - 2020-05-03
 
 ### Changes

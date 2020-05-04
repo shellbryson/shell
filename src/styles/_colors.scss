@@ -7,12 +7,15 @@ $color-black: #000000;
 $color-white: #ffffff;
 $color-action: #ff0000;
 $color-primary: #4573f7;
+$color-borders: #ee6d44;
+$color-borders-alt: $color-primary;
+$color-borders-faint: rgba($color-black, 0.2);
 
 // Named
 $color-body-alt: #181717;
-$color-body: #f1f5ff;
+$color-body: #181717;
 $color-text-shadow: $color-primary;
-$color-text-shadow-alt: $color-body;
+$color-text-shadow-alt: rgba($color-black, 0.2);
 $color-brand: $color-black;
 $color-link: $color-action;
 $color-link-active: $color-primary;

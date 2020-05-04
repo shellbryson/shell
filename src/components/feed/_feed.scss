@@ -1,0 +1,33 @@
+// ############################################################################
+// Component: FEED
+// ############################################################################
+
+.shell-feed {
+
+  &__entry {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid $color-borders-faint;
+  }
+
+  &__content {
+    padding-top: 1rem;
+    border-top: 1px solid $color-borders-faint;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @include text-shadow-alt;
+    font-family: $base-font-heading;
+
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+  }
+}

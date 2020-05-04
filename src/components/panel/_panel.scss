@@ -8,8 +8,6 @@
   $panel-footer-size: 80px;
 
   display: block;
-  color: $color-white;
-  backdrop-filter: blur(3px);
   z-index: 2;
 
   @include medium {
@@ -54,9 +52,9 @@
       padding: 6px;
       font-size: 0.75rem;
       text-transform: uppercase;
-      border-bottom: 1px solid $color-dividers-alt;
-      border-left: 30px solid $color-dividers-alt;
-      border-right: 4px solid $color-dividers-alt;
+      border-bottom: 1px solid $color-borders-alt;
+      border-left: 30px solid $color-borders-alt;
+      border-right: 4px solid $color-borders-alt;
       color: $color-body-alt;
       font-weight: bold;
     }
@@ -76,15 +74,16 @@
     margin: 1px;
     padding: 1rem;
     border: 1px solid red;
-    width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba($color-black, 0.4);
     border: 1px solid rgba($color-black, 0.2);
+
+    @include large {
+      width: 100%;
+    }
 
     p {
       font-size: 1.1rem;
-      color: $color-body;
     }
 
     a {
@@ -96,7 +95,7 @@
     width: 100%;
 
     @include medium {
-      width: 200px;
+      width: 300px;
     }
   }
 
@@ -114,38 +113,10 @@
     gap: 4px;
     padding-left: 4px;
     padding-right: 4px;
-    border-left: 1px solid $color-body-alt;
-    border-right: 1px solid $color-body-alt;
+    border-right: 1px solid $color-borders-alt;
 
     @include large {
       width: auto;
-    }
-  }
-
-  &__action {
-    display: block;
-    padding: 4px 1rem;
-    background: linear-gradient(176deg, rgba(205,205,205,0.2959558823529411) 0%, rgba(69,115,247,0) 100%);
-    background-color: rgba($color-white, 0.1);
-
-    color: $color-body-alt;
-    font-size: 1.2rem;
-    font-family: $base-font-heading;
-    text-decoration: none;
-    border-top: 3px solid rgba($color-white, 0.1);
-    border-bottom: 1px solid $color-white;
-
-    &:hover,
-    &:focus {
-      border-bottom: 1px solid $color-primary;
-    }
-
-    &.active {
-      @include text-shadow;
-      background: linear-gradient(176deg, rgba(97,127,191,0.427608543417367) 0%, rgba(69,115,247,0) 100%);
-      border-top: 3px solid $color-link-active;
-      border-bottom: 1px solid rgba($color-white, 0.1);
-      color: $color-white;
     }
   }
 }

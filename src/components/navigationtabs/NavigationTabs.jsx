@@ -4,17 +4,21 @@ import {
   NavLink,
 } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenFancy } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+
 class NavigationTabs extends Component {
 
   render() {
     return (
       <nav className="shell-navigationtabs">
         <div className="shell-navigationtabs__nav">
-          <NavLink to="/writer" className="shell-navigationtabs__link">
-            Writer
+          <NavLink to="/writer" className="shell-button">
+            Writer <FontAwesomeIcon icon={faPenFancy} />
           </NavLink>
-          <NavLink to="/engineer" className="shell-navigationtabs__link">
-            Engineer
+          <NavLink to="/engineer" className="shell-button">
+            Engineer <FontAwesomeIcon icon={faCode} />
           </NavLink>
         </div>
       </nav>

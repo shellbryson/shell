@@ -29,24 +29,24 @@ class Shatter extends Component {
 
     return (
       <div
-        class={`shell-shatter ${this.state.active ? "" : "over"}`}
+        className={`shell-shatter ${this.state.active ? "" : "over"}`}
         onMouseOver={this.onHover.bind(this)}
         onMouseLeave={this.onOut.bind(this)}
       >
-        <div class="l l1"></div>
-        <div class="l l2"></div>
-        <div class="l l3"></div>
-        <div class="l l4"></div>
-        <div class="l l5"></div>
-        <div class="l l6"></div>
-        <div class="l l7"></div>
-        <div class="l l8"></div>
-        <div class="l l9"></div>
-        <div class="l l10"></div>
-        <div class="l l11"></div>
-        <div class="l l12"></div>
-        <div class="l l13"></div>
-        <div class="l l14"></div>
+        <div className="l l1"></div>
+        <div className="l l2"></div>
+        <div className="l l3"></div>
+        <div className="l l4"></div>
+        <div className="l l5"></div>
+        <div className="l l6"></div>
+        <div className="l l7"></div>
+        <div className="l l8"></div>
+        <div className="l l9"></div>
+        <div className="l l10"></div>
+        <div className="l l11"></div>
+        <div className="l l12"></div>
+        <div className="l l13"></div>
+        <div className="l l14"></div>
       </div>
     );
   }

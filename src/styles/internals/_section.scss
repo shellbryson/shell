@@ -1,0 +1,18 @@
+.shell-section {
+  margin-top: 2rem;
+  padding: 6px;
+  font-size: 0.75rem;
+  font-family: $base-font-heading;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-borders-alt;
+  border-right: 30px solid $color-borders-alt;
+  border-left: 4px solid $color-borders-alt;
+  color: $color-body-alt;
+  font-weight: bold;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+}

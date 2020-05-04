@@ -1,0 +1,36 @@
+// ############################################################################
+// Component: LINK GRID
+// ############################################################################
+
+.shell-linkgrid {
+
+  &__link {
+    display: block;
+    padding: 4px;
+    margin: 4px;
+    border: 1px solid $color-borders-alt;
+    text-decoration: none;
+    color: $color-primary;
+    transition: $animation-speed;
+
+    &:hover,
+    &:focus {
+      background-color: $color-borders-alt;
+      color: $color-white;
+    }
+  }
+
+  &__title {
+    display: flex;
+    width: 100%;
+
+    & > span {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    font-size: 0.75rem;
+  }
+}
