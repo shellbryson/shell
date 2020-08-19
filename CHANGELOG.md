@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.3] - 2020-07-19
+
+### Layout
+
+- Layout:
+  - Fix: panels not aliging correctly on screens without much vertical space
+
+### Changes
+
+- General:
+  - Change: bump deps
+
+## [1.0.1] - 2020-07-19
+
+### Changes
+
+- Layout:
+  - Fix: panel menus escaping screen
+
 ## [1.0.0] - 2020-05-04
 
 ### Changes

@@ -10,16 +10,34 @@
   display: block;
   z-index: 2;
 
+  //////////////////////////////////
+  // Vertical breaks
+  //////////////////////////////////
+
+  @include breakpoint-height(768px) {
+    max-height: 580px;
+    height: 100vh;
+  }
+
+  @include breakpoint-height(800px) {
+    max-height: 650px;
+  }
+
+  @include breakpoint-height(1200px) {
+    max-height: 900px;
+  }
+
+  //////////////////////////////////
+  // Horizontal breaks
+  //////////////////////////////////
+
   @include medium {
     display: flex;
     position: absolute;
-    height: 100vh;
     width: calc(100% - 400px);
     left: 280px;
     top: 6rem;
     flex-direction: column;
-    min-height: 500px;
-    max-height: 900px;
     max-width: 800px;
     transform: perspective(900px) rotateY(-20deg) rotateX(-4deg);
     overflow: hidden;

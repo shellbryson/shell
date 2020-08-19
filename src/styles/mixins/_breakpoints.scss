@@ -45,3 +45,11 @@
 @mixin breakpoint-max($point) {
   @media (max-width: $point) { @content ; }
 }
+
+// *****************************************************************************
+// * Arbitrary vertical breakpoints for those edge cases
+// *****************************************************************************
+
+@mixin breakpoint-height($point) {
+  @media screen and (min-height: $point) { @content ; }
+}
