@@ -19,7 +19,7 @@
     top: 6rem;
     flex-direction: column;
     min-height: 500px;
-    max-height: 80vh;
+    max-height: 900px;
     max-width: 800px;
     transform: perspective(900px) rotateY(-20deg) rotateX(-4deg);
     overflow: hidden;
@@ -30,6 +30,7 @@
   }
 
   @include large {
+    top: 8rem;
     width: calc(100% - 370px);
   }
 
