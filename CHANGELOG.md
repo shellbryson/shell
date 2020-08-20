@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0] - 2020-07-21
+
+### Layout
+
+- Layout:
+  - Add: backgrounds
+  - Add: center UI and adjust through breakpoints
+  - Fix: remove section scrolling on mobiles
+
 ## [1.0.3] - 2020-07-19
 
 ### Layout

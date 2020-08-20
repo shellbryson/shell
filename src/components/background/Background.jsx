@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-// import BG1 from "./assets/BG1.jpg";
- import BG2 from "./assets/BG1.png";
+import ASSET_CIRCLE_1 from "./assets/circle1.svg";
 
 class Background extends Component {
   state = {};
@@ -19,14 +17,9 @@ class Background extends Component {
   // ####################################################
 
   render() {
-    // return (
-    //   <div className="shell-background"></div>
-    // );
     return (
-      <div
-        className="shell-background"
-        style={{backgroundImage: `url(${BG2})`}}
-      >
+      <div className="shell-background">
+        <img src={ASSET_CIRCLE_1} />
       </div>
     );
   }

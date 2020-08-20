@@ -2,15 +2,36 @@ body {
   font-family: $base-font-body;
   width: 100vw;
   overflow-x: hidden;
+
+  @include medium {
+    height: 100vw;
+    overflow-y: hidden;
+  }
 }
 
 .shell {
   display: block;
   position: relative;
   width: 100vw;
-  margin: 0 auto;
 
-  @include medium {
-    max-width: 1200px;
+  &__ui {
+    display: block;
+    position: relative;
+    width: 100vw;
+
+    @include medium {
+      margin: 0 auto;
+      width: 90vw;
+      transition: $animation-speed;
+    }
+
+    @include large {
+      margin: 0 auto;
+      width: 80vw;
+    }
+
+    @include xlarge {
+      width: 70vw;
+    }
   }
 }

@@ -11,30 +11,32 @@ class App extends Component {
       <Router>
         <div className="shell">
           <Background />
-          <Bio />
-          <Switch>
-            <Route
-              path="/writer"
-              exact
-              render={(props) => <Panel slug="writer" {...props} />}
-            ></Route>
-            <Route
-              path="/social"
-              exact
-              render={(props) => <Panel slug="social" {...props} />}
-            ></Route>
-            <Route
-              path="/bio"
-              exact
-              render={(props) => <Panel slug="bio" {...props} />}
-            ></Route>
-            <Route
-              path="/engineer"
-              exact
-              render={(props) => <Panel slug="engineer" {...props} />}
-            ></Route>
-            <Redirect to="/writer" />
-          </Switch>
+          <div className="shell__ui">
+            <Bio />
+            <Switch>
+              <Route
+                path="/writer"
+                exact
+                render={(props) => <Panel slug="writer" {...props} />}
+              ></Route>
+              <Route
+                path="/social"
+                exact
+                render={(props) => <Panel slug="social" {...props} />}
+              ></Route>
+              <Route
+                path="/bio"
+                exact
+                render={(props) => <Panel slug="bio" {...props} />}
+              ></Route>
+              <Route
+                path="/engineer"
+                exact
+                render={(props) => <Panel slug="engineer" {...props} />}
+              ></Route>
+              <Redirect to="/writer" />
+            </Switch>
+          </div>
         </div>
       </Router>
     );
